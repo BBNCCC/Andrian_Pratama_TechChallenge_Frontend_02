@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a2e;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.countdown-container,
+.finished-container {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.countdown-container h1,
+.finished-container h1 {
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.event-name {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.time-box {
+    background: #1a1a2e;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 100px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+.time-box label {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.separator {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.target-date {
+    color: #666;
+    font-size: 1rem;
+}
+
+.finished-container {
+    display: none;
+}
+
+.finished-container.show {
+    display: block;
+}
+
+.countdown-container.hide {
+    display: none;
+}
+
+.finished-icon {
+    margin-bottom: 20px;
+}
+
+.finished-container p {
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .countdown-display {
+        flex-wrap: wrap;
+    }
+    .time-box {
+        min-width: 70px;
+        padding: 15px;
+    }
+    .time-box span {
+        font-size: 2rem;
+    }
+    .separator {
+        font-size: 2rem;
+    }
+}
